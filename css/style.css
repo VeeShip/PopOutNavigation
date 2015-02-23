@@ -91,10 +91,10 @@ html, body {
   -moz-transition: -moz-transform .3s, top .3s, background-color 0s;
   transition: transform .3s, top .3s, background-color 0s;
 }
-.ts-nav-trigger .cd-nav-icon::before {
+.ts-nav-trigger .ts-nav-icon::before {
   top: -5px;
 }
-.ts-nav-trigger .cd-nav-icon::after {
+.ts-nav-trigger .ts-nav-icon::after {
   top: 5px;
 }
 
@@ -104,10 +104,10 @@ html, body {
 .ts-nav-trigger .ts-nav-icon.is-clicked {
   background-color: rgba(255, 255, 255, 0);
 }
-.ts-nav-trigger .cd-nav-icon.is-clicked::before, .ts-nav-trigger .cd-nav-icon.is-clicked::after {
+.ts-nav-trigger .ts-nav-icon.is-clicked::before, .ts-nav-trigger .cd-nav-icon.is-clicked::after {
   background-color: white;
 }
-.ts-nav-trigger .cd-nav-icon.is-clicked::before {
+.ts-nav-trigger .ts-nav-icon.is-clicked::before {
   top: 0;
   -webkit-transform: rotate(135deg);
   -moz-transform: rotate(135deg);
@@ -115,7 +115,7 @@ html, body {
   -o-transform: rotate(135deg);
   transform: rotate(135deg);
 }
-.ts-nav-trigger .cd-nav-icon.is-clicked::after {
+.ts-nav-trigger .ts-nav-icon.is-clicked::after {
   top: 0;
   -webkit-transform: rotate(225deg);
   -moz-transform: rotate(225deg);
