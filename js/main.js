@@ -7,15 +7,14 @@ jQuery(document).ready(function($){
 		if( $('.ts-nav').hasClass('is-visible') ) {
 			$('.ts-nav').removeClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
 				$('body').removeClass('overflow-hidden');
+				$('.nav-icon').removeClass('fa-remove').addClass('fa-bars');
 			});
 		} else {
 			$('.ts-nav').addClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
 				$('body').addClass('overflow-hidden');
+				$('.nav-icon').removeClass('fa-bars').addClass('fa-remove');
 			});	
 		}
-
-		//change bars icon to x icon
-		
 	});
 
 
