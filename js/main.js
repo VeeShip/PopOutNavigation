@@ -13,5 +13,10 @@ jQuery(document).ready(function($){
 				$('body').addClass('overflow-hidden');
 			});	
 		}
+
+		//change bars icon to x icon
+		
 	});
+
+
 });

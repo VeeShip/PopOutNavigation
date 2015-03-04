@@ -59,7 +59,14 @@ html, body {
   top: 0;
   height: 100%;
   width: 50px;
+  text-align: center;
 }
+.nav-icon {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .ts-nav-trigger .ts-nav-icon {
   /* this span is the central line of the nav icon */
   display: inline-block;
@@ -104,7 +111,7 @@ html, body {
 .ts-nav-trigger .ts-nav-icon.is-clicked {
   background-color: rgba(255, 255, 255, 0);
 }
-.ts-nav-trigger .ts-nav-icon.is-clicked::before, .ts-nav-trigger .cd-nav-icon.is-clicked::after {
+.ts-nav-trigger .ts-nav-icon.is-clicked::before, .ts-nav-trigger .ts-nav-icon.is-clicked::after {
   background-color: white;
 }
 .ts-nav-trigger .ts-nav-icon.is-clicked::before {
