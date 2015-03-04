@@ -1,21 +1,17 @@
 jQuery(document).ready(function($){
-	//open/close primary navigation
+	//Toggle NAV
 	$('.ts-nav-trigger').on('click', function(){
 		$('.ts-menu-icon').toggleClass('is-clicked'); 
-		
-		//in firefox transitions break when parent overflow is changed, so we need to wait for the end of the trasition to give the body an overflow hidden
 		if( $('.ts-nav').hasClass('is-visible') ) {
+			$('.nav-icon').removeClass('fa-remove').addClass('fa-bars');
 			$('.ts-nav').removeClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
 				$('body').removeClass('overflow-hidden');
-				$('.nav-icon').removeClass('fa-remove').addClass('fa-bars');
 			});
 		} else {
+			$('.nav-icon').removeClass('fa-bars').addClass('fa-remove');
 			$('.ts-nav').addClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
 				$('body').addClass('overflow-hidden');
-				$('.nav-icon').removeClass('fa-bars').addClass('fa-remove');
 			});	
 		}
 	});
-
-
 });
