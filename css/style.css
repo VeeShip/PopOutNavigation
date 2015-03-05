@@ -30,6 +30,7 @@ section {
 }
 footer {
   text-align: center;
+  padding: 2vh 0;
 }
 
 
@@ -86,7 +87,7 @@ html, body {
 /****** NAV MENU ******/
 .ts-nav {
   /*** Default: Hidden Above Viewport ***/
-  position: fixed;
+  position: absolute;
   height: 100%;
   width: 100%;
   background: rgba(2, 23, 37, 0.80);

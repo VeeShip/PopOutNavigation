@@ -1,11 +1,11 @@
-$(document).ready(function($){
-	//TOGGLE NAV
-
-	//DETERMINE  CURRENT POSITION ON PAGE
-	
+$(document).ready(function($){	
 
 	//MENU ICON : ON CLICK
 	$('.ts-nav-trigger').on('click', function(){
+
+		//DETERMINE CURRENT POSITION ON PAGE
+
+		//TOGGLE NAV
 		if( $('.ts-nav').hasClass('is-visible') ) {
 			$('.nav-icon').removeClass('fa-remove').addClass('fa-bars');
 			$('.ts-nav').removeClass('is-visible').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend',function(){
