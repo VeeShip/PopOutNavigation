@@ -6,7 +6,7 @@
 }
 body {
   font-size: 100%;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: sans-serif;
   color: rgba(2, 23, 37, 0.7);
   background-color: #b2b2b2;
 }
@@ -21,7 +21,15 @@ a {
 section {
   height: 100%;
   width: 100%;
-  padding: 100px 20px 20px 20px;
+  padding: 15vh 15vw;
+  color: white;
+}
+#link3,
+#link1 {
+  background-color: #222222;
+}
+footer {
+  text-align: center;
 }
 
 
@@ -31,21 +39,16 @@ html, body {
 }
 .ts-navbar {
   position: fixed;
-  top: 0;
-  left: 0;
   background: transparent;
   height: 50px;
   width: 100%;
   z-index: 3;
   box-shadow: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 .ts-logo {
   display: block;
   position: absolute;
   top: 50%;
-  bottom: auto;
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
@@ -72,6 +75,7 @@ html, body {
   text-align: center;
 }
 .nav-icon {
+  /*** Vertical Align ***/
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -81,13 +85,11 @@ html, body {
 
 /****** NAV MENU ******/
 .ts-nav {
-  /* by default it's hidden - on top of the viewport */
+  /*** Default: Hidden Above Viewport ***/
   position: fixed;
-  left: 0;
-  top: 0;
   height: 100%;
   width: 100%;
-  background: rgba(2, 23, 37, 0.96);
+  background: rgba(2, 23, 37, 0.80);
   z-index: 2;
   text-align: center;
   padding: 50px 0;
@@ -95,24 +97,27 @@ html, body {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   overflow: auto;
-  /* flexbox */
+  /*** Flex NAV ***/
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
+  /*** Flex Direction ***/
   -webkit-box-flex-direction: column;
   -moz-box-flex-direction: column;
   -ms-flex-direction: column;
   -webkit-flex-direction: column;
   flex-direction: column;
+  /*** Justify Content ***/
   -webkit-box-justify-content: space-around;
   -moz-box-justify-content: space-around;
   -ms-justify-content: space-around;
   -webkit-justify-content: space-around;
   justify-content: space-around;
-  /* this fixes the buggy scrolling on webkit browsers - mobile devices only - when overflow property is applied */
+  /*** Overflow Scrolling - Bugfix for Mobile Webkit devices ***/
   -webkit-overflow-scrolling: touch;
+  /*** Translate NAV above Viewport ***/
   -webkit-transform: translateY(-100%);
   -moz-transform: translateY(-100%);
   -ms-transform: translateY(-100%);
@@ -125,6 +130,10 @@ html, body {
   -moz-transition-duration: 0.4s;
   transition-duration: 0.4s;
 }
+
+
+
+/*** NAV LINKS ***/
 .ts-nav li {
   font-size: 22px;
   font-size: 1.375rem;
@@ -152,30 +161,25 @@ html, body {
   -o-transform: translateY(0);
   transform: translateY(0);
 }
+
+
+/****** CONTENT ******/
 .ts-about,
 .ts-intro {
   position: relative;
   height: 100%;
   z-index: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  display: table;
+  padding: 0;
+  margin: 0;
 }
 .ts-intro h1 {
-  position: absolute;
-  width: 90%;
-  max-width: 1170px;
-  left: 50%;
-  top: 50%;
-  bottom: auto;
-  right: auto;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -o-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  color: white;
-  font-size: 20px;
-  font-size: 1.25rem;
-  font-weight: 300;
+  height: 100%;
+  margin: 0 7vw;
+  font-size: 1.5rem;
+  padding: 0;
   text-align: center;
+  color: white;
+  display: table-cell;
+  vertical-align: middle;
 }

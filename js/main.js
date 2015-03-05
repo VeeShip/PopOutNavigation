@@ -1,5 +1,8 @@
 $(document).ready(function($){
-	//Toggle NAV
+	//TOGGLE NAV
+
+	//DETERMINE  CURRENT POSITION ON PAGE
+	
 
 	//MENU ICON : ON CLICK
 	$('.ts-nav-trigger').on('click', function(){
