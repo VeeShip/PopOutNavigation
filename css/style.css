@@ -1,8 +1,7 @@
-/****** PRIMARY STYLING ******/
-*, *:after, *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+
+/****** GENERAL *******/
+html, body {
+  height: 100%;
 }
 body {
   font-size: 100%;
@@ -11,7 +10,6 @@ body {
   background-color: #b2b2b2;
 }
 body.overflow-hidden {
-  /* when primary navigation is visible, the content in the background won't scroll */
   overflow: hidden;
 }
 a {
@@ -21,10 +19,7 @@ a {
 
 
 
-/****** GENERAL *******/
-html, body {
-  height: 100%;
-}
+/****** GENERAL NAV ******/
 .ts-navbar {
   position: absolute;
   top: 0;
@@ -60,6 +55,8 @@ html, body {
   height: 100%;
   width: 50px;
   text-align: center;
+  -webkit-transition: -webkit-transform 10s;
+  transition: tranform 10s;
 }
 .nav-icon {
   position: relative;
@@ -68,9 +65,9 @@ html, body {
 }
 
 
-/****** NAV MENU ******/
+
+/****** NAV HIDDEN MENU ******/
 .ts-nav {
-  /* by default it's hidden - on top of the viewport */
   position: fixed;
   left: 0;
   top: 0;
@@ -84,7 +81,7 @@ html, body {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   overflow: auto;
-  /* flexbox */
+  /****** UL FLEXBOX ******/
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -168,3 +165,4 @@ html, body {
   font-weight: 300;
   text-align: center;
 }
+
