@@ -1,7 +1,8 @@
-
-/****** GENERAL *******/
-html, body {
-  height: 100%;
+/****** PRIMARY STYLING ******/
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 body {
   font-size: 100%;
@@ -10,18 +11,26 @@ body {
   background-color: #b2b2b2;
 }
 body.overflow-hidden {
+  /* when primary navigation is visible, the content in the background won't scroll */
   overflow: hidden;
 }
 a {
   color: white;
   text-decoration: none;
 }
+section {
+  height: 100%;
+  width: 100%;
+  padding: 100px 20px 20px 20px;
+}
 
 
-
-/****** GENERAL NAV ******/
+/****** GENERAL *******/
+html, body {
+  height: 100%;
+}
 .ts-navbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   background: transparent;
@@ -44,6 +53,11 @@ a {
   transform: translateY(-50%);
   left: .875em;
 }
+.ts-section {
+  height: 100%;
+  width: 100%;
+  padding: 15vw 15vh;
+}
 
 
 
@@ -55,8 +69,6 @@ a {
   height: 100%;
   width: 50px;
   text-align: center;
-  -webkit-transition: -webkit-transform 10s;
-  transition: tranform 10s;
 }
 .nav-icon {
   position: relative;
@@ -66,8 +78,9 @@ a {
 
 
 
-/****** NAV HIDDEN MENU ******/
+/****** NAV MENU ******/
 .ts-nav {
+  /* by default it's hidden - on top of the viewport */
   position: fixed;
   left: 0;
   top: 0;
@@ -81,7 +94,7 @@ a {
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   overflow: auto;
-  /****** UL FLEXBOX ******/
+  /* flexbox */
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -165,4 +178,3 @@ a {
   font-weight: 300;
   text-align: center;
 }
-
